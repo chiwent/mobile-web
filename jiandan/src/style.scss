@@ -1,0 +1,141 @@
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px / $rem)+rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    background-color: #f8f8f8;
+    width: 100%;
+}
+
+body {
+    font-family: Helvetica;
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.wrapper {
+    text-align: left;
+    font-size: px2rem(14px);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header {
+    //background: #fff url('./assets/LOGO.png') no-repeat scroll 5px 10px;
+    background: #fff;
+    background-size: px2rem(156px) px2rem(66px);
+    .header-img {
+        //padding: px2rem(20px) 0 px2rem(10px) px2rem(10px);
+        a {
+            display: none;
+        }
+        .logo {
+            max-width: px2rem(150px);
+            max-height: px2rem(100px);
+            position: relative;
+            left: 0;
+        }
+        h1 {
+            display: none;
+        }
+    }
+    .header-nav {
+        background-color: #222;
+        color: #aaa;
+        font-size: px2rem(12px);
+        // margin-top: px2rem(52px);
+        padding: px2rem(7px) px2rem(10px);
+        a {
+            padding-right: px2rem(8px);
+            color: #aaa;
+            .active {
+                color: #fff;
+            }
+        }
+        .pull-right {
+            float: right;
+        }
+    }
+}
+
+.main {
+    .clearfix {
+        display: block;
+        zoom: 1;
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+    }
+    .main-container {
+        background-color: #fff;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        .post {
+            padding: px2rem(5px) px2rem(10px);
+            // font-size: px2rem(14px);
+        }
+    }
+}
+
+.post-content {
+    padding: 0;
+    width: 100%;
+    .comment-numbers {
+        color: #aaa;
+        float: right;
+        font-family: sans-serif;
+        line-height: 1em;
+        font-size: px2rem(12px);
+    }
+    .news-avatar {
+        float: left;
+        padding-right: px2rem(10px);
+        display: inline;
+        &:link,
+        &:visited {
+            color: #4285f4;
+            text-decoration: none;
+        }
+        img {
+            display: inline;
+            width: px2rem(50px);
+            height: px2rem(50px);
+        }
+    }
+    h3.post-title,
+    h3.post-title a {
+        font-size: px2rem(15px);
+        font-weight: bold;
+        padding-top: px2rem(3px);
+        width: 100%;
+        color: #ea4335;
+        text-decoration: none;
+        display: block;
+        line-height: 1em;
+        margin-bottom: 5px;
+    }
+    .post-content {
+        color: #aaa;
+        min-height: px2rem(25px);
+        font-size: px2rem(12px);
+        padding-bottom: px2rem(8px);
+        line-height: px2rem(18px);
+    }
+}
